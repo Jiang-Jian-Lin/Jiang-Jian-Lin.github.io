@@ -2,34 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://Jiang-Jian-Lin.github.io/blog/</loc>
+    <lastmod>2021-05-07T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/categories/</loc>
+    <lastmod>2021-05-07T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/categories/go-language/</loc>
+    <lastmod>2021-05-07T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/tags/hackmd/</loc>
+    <lastmod>2021-05-07T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/tags/hugo/</loc>
+    <lastmod>2021-05-07T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/</loc>
+    <lastmod>2021-05-07T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/tags/markdown/</loc>
+    <lastmod>2021-05-07T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/blog/post-1-copy-2/</loc>
+    <lastmod>2021-05-07T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/tags/</loc>
+    <lastmod>2021-05-07T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/tags/typora/</loc>
+    <lastmod>2021-05-07T21:30:00+08:00</lastmod>
+  </url><url>
     <loc>https://Jiang-Jian-Lin.github.io/about/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
   </url><url>
     <loc>https://Jiang-Jian-Lin.github.io/contact/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
   </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/</loc>
-    <lastmod>2019-10-29T13:49:23+06:00</lastmod>
-  </url><url>
     <loc>https://Jiang-Jian-Lin.github.io/search/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
-  </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/blog/</loc>
-  </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/categories/</loc>
-  </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/categories/go-language/</loc>
-  </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/tags/hackmd/</loc>
-  </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/tags/hugo/</loc>
-  </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/tags/markdown/</loc>
-  </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/blog/post-1/</loc>
-  </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/tags/</loc>
-  </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/tags/typora/</loc>
   </url>
 </urlset>
