@@ -129,10 +129,10 @@
     <div class="row">
       <div class="col-lg-10 mx-auto">
         
-        <a href="/categories/leetcode"
-          class="text-primary">Leetcode</a>
+        <a href="/categories/go-language"
+          class="text-primary">Go language</a>
         
-        <h2>LeetCode 704 Binary Search(JavaScript)</h2>
+        <h2>Markdown-紀錄常用語法</h2>
         <div class="mb-3 post-meta">
           <span>By Jian-Lin</span>
           
@@ -141,52 +141,136 @@
           
         </div>
         
+        <img src="https://Jiang-Jian-Lin.github.io/images/post/post-3.jpg" class="img-fluid w-100 mb-4" alt="Markdown-紀錄常用語法">
+        
         <div class="content mb-5">
-          <h2 id="題目">題目</h2>
-<p>Given an array of integers <code>nums</code> which is sorted in ascending order, and an integer <code>target</code>, write a function to search <code>target</code> in <code>nums</code>. If <code>target</code> exists, then return its index. Otherwise, return <code>-1</code>.</p>
-<h2 id="解題思路">解題思路</h2>
-<h5 id="1-描述過程-think-out-aloud">1. 描述過程（ Think out aloud）</h5>
-<p>當找到想要的目標，就顯示我的答案，如果數列沒有我的目標就顯示 -1</p>
-<p>使用二分法，因為已經排序過。可以讓時間複雜度在 O(log(n))</p>
-<p>通過左右邊界找到中點，如果為要找的數返回，否則移動邊界，找不到，返回 -1。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">search</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">nums</span>, <span style="color:#a6e22e">target</span>) {
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// 初始左边界
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">nums</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 初始右边界
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 如果left &gt; right 证明整个数组结束了仍没有找到目标值
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">left</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">right</span>) {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">+</span> Math.<span style="color:#a6e22e">floor</span>((<span style="color:#a6e22e">right</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">left</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>); <span style="color:#75715e">//防止溢出
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">target</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">mid</span>]) {
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">mid</span>;
-    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">target</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">mid</span>]) {
-      <span style="color:#75715e">// 目标值大于中值，则中间左侧可以抛弃了
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-    } <span style="color:#66d9ef">else</span> {
-      <span style="color:#75715e">// 目标值小于中值，则中间右侧可以抛弃了
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
-    }
-  }
-  <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-};
-
-</code></pre></div><p>使用 Binary Search 的關鍵</p>
-<blockquote>
+          <h1 id="正所謂的萬事起頭難">正所謂的萬事起頭難！</h1>
+<h1 id="heading">Heading</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+<!-- raw HTML omitted -->
+<h5 id="emphasis">Emphasis</h5>
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+<!-- raw HTML omitted -->
+<h5 id="link">Link</h5>
+<p><a href="https://www.google.com">I&rsquo;m an inline-style link</a></p>
+<p><a href="https://www.google.com" title="Google's Homepage">I&rsquo;m an inline-style link with title</a></p>
+<p><a href="https://www.mozilla.org">I&rsquo;m a reference-style link</a></p>
+<p><a href="../blob/master/LICENSE">I&rsquo;m a relative reference to a repository file</a></p>
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>.</p>
+<p>URLs and URLs in angle brackets will automatically get turned into links.
+<a href="http://www.example.com">http://www.example.com</a> or <a href="http://www.example.com">http://www.example.com</a> and sometimes
+example.com (but not on Github, for example).</p>
+<p>Some text to show that the reference links can follow later.</p>
+<!-- raw HTML omitted -->
+<h5 id="paragraph">Paragraph</h5>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.</p>
+<!-- raw HTML omitted -->
+<h5 id="list">List</h5>
 <ol>
-<li>排序後的數組</li>
-<li>限定時間複雜度的搜尋法(題目限定O(n)以下的解法）</li>
-<li><a href="https://www.cnblogs.com/grandyang/p/6854825.html">Others</a></li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
 </ol>
-</blockquote>
-<h3 id="補充">補充</h3>
-<blockquote>
+<h5 id="unordered-list">Unordered List</h5>
 <ul>
-<li>用二元搜尋,每次都要先 Sorted Array。因此追加資料時，必須插入恰當的位置，需要付出維護陣列的代價。</li>
-<li>線性搜尋，陣列的數據雜亂無章也無所謂。</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
 </ul>
+<!-- raw HTML omitted -->
+<h5 id="code-and-syntax-highlighting">Code and Syntax Highlighting</h5>
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;JavaScript syntax highlighting&#34;</span>;
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">s</span>);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Python syntax highlighting&#34;</span>
+<span style="color:#66d9ef">print</span> s
+</code></pre></div><pre><code>No language indicated, so no syntax highlighting.
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre><!-- raw HTML omitted -->
+<h5 id="blockquote">Blockquote</h5>
+<blockquote>
+<p>This is a blockquote example.</p>
 </blockquote>
-<p><a href="https://www.researchgate.net/figure/shows-a-comparison-of-Sorting-Algorithms_tbl1_281208285">各種排序比較</a></p>
-<p><a href="https://blog.huli.tw/2016/09/23/binary-search-introduction/">Ref:Huli</a></p>
-<p><a href="https://yuguang.blog.csdn.net/article/details/110879893?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-7.vipsorttest&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-7.vipsorttest">Ref:csdn</a></p>
-<p><a href="https://maxming0.github.io/2020/10/08/Binary-Search/">Ref:python</a></p>
+<!-- raw HTML omitted -->
+<h5 id="inline-html">Inline HTML</h5>
+<p>You can also use raw HTML in your Markdown, and it&rsquo;ll mostly work pretty well.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h5 id="tables">Tables</h5>
+<p>Colons can be used to align columns.</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<p>There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don&rsquo;t need to make the
+raw Markdown line up prettily. You can also use inline Markdown.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h5 id="image">Image</h5>
+<p><img src="../../images/post/post-1.jpg" alt="image"></p>
+<!-- raw HTML omitted -->
+<h5 id="youtube-video">Youtube video</h5>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/C0DPdy98e4c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 
         </div>
 

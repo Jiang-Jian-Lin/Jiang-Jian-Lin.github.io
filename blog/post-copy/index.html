@@ -147,46 +147,32 @@
 <h2 id="解題思路">解題思路</h2>
 <h5 id="1-描述過程-think-out-aloud">1. 描述過程（ Think out aloud）</h5>
 <p>當找到想要的目標，就顯示我的答案，如果數列沒有我的目標就顯示 -1</p>
-<p>使用二分法，因為已經排序過。可以讓時間複雜度在 O(log(n))</p>
+<h5 id="2-描述過程-think-out-aloud">2. 描述過程（ Think out aloud）</h5>
+<p>使用二分法，因為已經排序過。可以讓時間複雜度在O(log(n))</p>
 <p>通過左右邊界找到中點，如果為要找的數返回，否則移動邊界，找不到，返回 -1。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">search</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">nums</span>, <span style="color:#a6e22e">target</span>) {
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// 初始左边界
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">nums</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 初始右边界
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 如果left &gt; right 证明整个数组结束了仍没有找到目标值
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">left</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">right</span>) {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">+</span> Math.<span style="color:#a6e22e">floor</span>((<span style="color:#a6e22e">right</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">left</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>); <span style="color:#75715e">//防止溢出
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">target</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">mid</span>]) {
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">mid</span>;
-    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">target</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">mid</span>]) {
-      <span style="color:#75715e">// 目标值大于中值，则中间左侧可以抛弃了
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-    } <span style="color:#66d9ef">else</span> {
-      <span style="color:#75715e">// 目标值小于中值，则中间右侧可以抛弃了
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">var</span> search <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span>(nums, target) {
+    <span style="color:#ff79c6">const</span> len <span style="color:#ff79c6">=</span>nums.length
+    <span style="color:#8be9fd;font-style:italic">let</span> left <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+    <span style="color:#8be9fd;font-style:italic">let</span> right <span style="color:#ff79c6">=</span> len <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span> 
+    <span style="color:#ff79c6">while</span> (left <span style="color:#ff79c6">&lt;=</span> right){
+        <span style="color:#ff79c6">const</span> pivot <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Math</span>.floor((left<span style="color:#ff79c6">+</span>right<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span>))
+        <span style="color:#ff79c6">if</span>(nums[pivot] <span style="color:#ff79c6">===</span> target){
+            <span style="color:#ff79c6">return</span> piovt
+        }
+        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> (nums[pivot] <span style="color:#ff79c6">&gt;</span> target){
+            right <span style="color:#ff79c6">=</span> pivot <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>
+        }
+        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> (nums[pivot] <span style="color:#ff79c6">&lt;</span> target){
+            left <span style="color:#ff79c6">=</span> pivot <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>
+        }
     }
-  }
-  <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>
 };
-
-</code></pre></div><p>使用 Binary Search 的關鍵</p>
-<blockquote>
-<ol>
-<li>排序後的數組</li>
-<li>限定時間複雜度的搜尋法(題目限定O(n)以下的解法）</li>
-<li><a href="https://www.cnblogs.com/grandyang/p/6854825.html">Others</a></li>
-</ol>
-</blockquote>
-<h3 id="補充">補充</h3>
-<blockquote>
+</code></pre></div><p>補充</p>
 <ul>
-<li>用二元搜尋,每次都要先 Sorted Array。因此追加資料時，必須插入恰當的位置，需要付出維護陣列的代價。</li>
-<li>線性搜尋，陣列的數據雜亂無章也無所謂。</li>
+<li>使用二元搜尋,每次都要先Sorted Array。因此追加資料時，必須插入恰當的位置，需要付出維護陣列的代價。</li>
+<li>線性搜尋，陣列的數據雜亂無章也無所謂</li>
 </ul>
-</blockquote>
-<p><a href="https://www.researchgate.net/figure/shows-a-comparison-of-Sorting-Algorithms_tbl1_281208285">各種排序比較</a></p>
-<p><a href="https://blog.huli.tw/2016/09/23/binary-search-introduction/">Ref:Huli</a></p>
-<p><a href="https://yuguang.blog.csdn.net/article/details/110879893?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-7.vipsorttest&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-7.vipsorttest">Ref:csdn</a></p>
-<p><a href="https://maxming0.github.io/2020/10/08/Binary-Search/">Ref:python</a></p>
 
         </div>
 
