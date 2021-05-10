@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Jian-Lin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-us</language>
-    <lastBuildDate>Fri, 07 May 2021 21:30:00 +0800</lastBuildDate><atom:link href="https://Jiang-Jian-Lin.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 May 2021 06:00:00 +0800</lastBuildDate><atom:link href="https://Jiang-Jian-Lin.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>leetcode</title>
+      <link>https://Jiang-Jian-Lin.github.io/categories/leetcode/</link>
+      <pubDate>Tue, 11 May 2021 06:00:00 +0800</pubDate>
+      
+      <guid>https://Jiang-Jian-Lin.github.io/categories/leetcode/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Go Language</title>
       <link>https://Jiang-Jian-Lin.github.io/categories/go-language/</link>
