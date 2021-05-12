@@ -149,23 +149,23 @@
 <p>當找到想要的目標，就顯示我的答案，如果數列沒有我的目標就顯示 -1</p>
 <p>使用二分法，因為已經排序過。可以讓時間複雜度在 O(log(n))</p>
 <p>通過左右邊界找到中點，如果為要找的數返回，否則移動邊界，找不到，返回 -1。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">search</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">nums</span>, <span style="color:#a6e22e">target</span>) {
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// 初始左边界
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">nums</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 初始右边界
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 如果left &gt; right 证明整个数组结束了仍没有找到目标值
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">left</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">right</span>) {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">+</span> Math.<span style="color:#a6e22e">floor</span>((<span style="color:#a6e22e">right</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">left</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>); <span style="color:#75715e">//防止溢出
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">target</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">mid</span>]) {
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">mid</span>;
-    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">target</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">mid</span>]) {
-      <span style="color:#75715e">// 目标值大于中值，则中间左侧可以抛弃了
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-    } <span style="color:#66d9ef">else</span> {
-      <span style="color:#75715e">// 目标值小于中值，则中间右侧可以抛弃了
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#2c5dcd;font-weight:bold">var</span> search <span style="color:#2c5dcd">=</span> <span style="color:#2c5dcd;font-weight:bold">function</span> (nums, target) {
+  <span style="color:#2c5dcd;font-weight:bold">let</span> left <span style="color:#2c5dcd">=</span> <span style="color:#5918bb;font-weight:bold">0</span>; <span style="color:#0080ff;font-style:italic">// 初始左边界
+</span><span style="color:#0080ff;font-style:italic"></span>  <span style="color:#2c5dcd;font-weight:bold">let</span> right <span style="color:#2c5dcd">=</span> nums.length <span style="color:#2c5dcd">-</span> <span style="color:#5918bb;font-weight:bold">1</span>; <span style="color:#0080ff;font-style:italic">// 初始右边界
+</span><span style="color:#0080ff;font-style:italic"></span>  <span style="color:#0080ff;font-style:italic">// 如果left &gt; right 证明整个数组结束了仍没有找到目标值
+</span><span style="color:#0080ff;font-style:italic"></span>  <span style="color:#2c5dcd;font-weight:bold">while</span> (left <span style="color:#2c5dcd">&lt;=</span> right) {
+    <span style="color:#2c5dcd;font-weight:bold">let</span> mid <span style="color:#2c5dcd">=</span> left <span style="color:#2c5dcd">+</span> <span style="color:#5918bb;font-weight:bold">Math</span>.floor((right <span style="color:#2c5dcd">-</span> left) <span style="color:#2c5dcd">/</span> <span style="color:#5918bb;font-weight:bold">2</span>); <span style="color:#0080ff;font-style:italic">//防止溢出
+</span><span style="color:#0080ff;font-style:italic"></span>    <span style="color:#2c5dcd;font-weight:bold">if</span> (target <span style="color:#2c5dcd">===</span> nums[mid]) {
+      <span style="color:#2c5dcd;font-weight:bold">return</span> mid;
+    } <span style="color:#2c5dcd;font-weight:bold">else</span> <span style="color:#2c5dcd;font-weight:bold">if</span> (target <span style="color:#2c5dcd">&gt;</span> nums[mid]) {
+      <span style="color:#0080ff;font-style:italic">// 目标值大于中值，则中间左侧可以抛弃了
+</span><span style="color:#0080ff;font-style:italic"></span>      left <span style="color:#2c5dcd">=</span> mid <span style="color:#2c5dcd">+</span> <span style="color:#5918bb;font-weight:bold">1</span>;
+    } <span style="color:#2c5dcd;font-weight:bold">else</span> {
+      <span style="color:#0080ff;font-style:italic">// 目标值小于中值，则中间右侧可以抛弃了
+</span><span style="color:#0080ff;font-style:italic"></span>      right <span style="color:#2c5dcd">=</span> mid <span style="color:#2c5dcd">-</span> <span style="color:#5918bb;font-weight:bold">1</span>;
     }
   }
-  <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+  <span style="color:#2c5dcd;font-weight:bold">return</span> <span style="color:#2c5dcd">-</span><span style="color:#5918bb;font-weight:bold">1</span>;
 };
 </code></pre></div><h3 id="使用-binary-search-的關鍵">使用 Binary Search 的關鍵</h3>
 <blockquote>
