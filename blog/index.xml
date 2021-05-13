@@ -17,15 +17,6 @@
     </item>
     
     <item>
-      <title>Third</title>
-      <link>https://Jiang-Jian-Lin.github.io/blog/3-blog/</link>
-      <pubDate>Tue, 11 May 2021 06:00:00 +0800</pubDate>
-      
-      <guid>https://Jiang-Jian-Lin.github.io/blog/3-blog/</guid>
-      <description>package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; &amp;#34;time&amp;#34; ) type Moo struct { Cow int Sound string Tube chan bool } // A cow will moo until it is being fed func cow(num int, mootube chan Moo) { tube := make(chan bool) for { select { case mootube &amp;lt;- Moo{num, &amp;#34;moo&amp;#34;, tube}: fmt.</description>
-    </item>
-    
-    <item>
       <title>Markdown-紀錄常用語法</title>
       <link>https://Jiang-Jian-Lin.github.io/blog/1-blog/</link>
       <pubDate>Fri, 07 May 2021 21:30:00 +0800</pubDate>
