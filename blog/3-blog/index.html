@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一天一解題，考試沒煩惱">
+  <meta name="description" content="看課本,突然靈感來實作氣泡排序演算法">
   <meta name="author" content="Jian-Lin">
   <meta name="generator" content="Hugo 0.82.1" />
 
@@ -132,7 +132,7 @@
         <a href="/categories/leetcode"
           class="text-primary">Leetcode</a>
         
-        <h2>Third</h2>
+        <h2>Bubble Sort</h2>
         <div class="mb-3 post-meta">
           <span>By Jian-Lin</span>
           
@@ -142,78 +142,31 @@
         </div>
         
         <div class="content mb-5">
-          <div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#2c5dcd;font-weight:bold">package</span> main
+          <h2 id="題目">題目</h2>
+<h2 id="bubble-sort-基本觀念">Bubble Sort 基本觀念</h2>
+<h2 id="implement-code">Implement Code</h2>
+<p>public static void mian</p>
+<p>// round?</p>
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#2c5dcd;font-weight:bold">for</span> <span style="color:#2c5dcd">(</span><span style="color:#5918bb;font-weight:bold">int</span> round <span style="color:#2c5dcd">=</span> 0<span style="color:#2c5dcd">;</span> round <span style="color:#2c5dcd">&lt;</span> nums<span style="color:#2c5dcd">.</span><span style="color:#2c5dcd;font-style:italic">length</span> <span style="color:#2c5dcd">;</span>round<span style="color:#2c5dcd">++){</span>
 
-<span style="color:#2c5dcd;font-weight:bold">import</span> (
-    <span style="color:#0c6">&#34;fmt&#34;</span>
-    <span style="color:#0c6">&#34;math/rand&#34;</span>
-    <span style="color:#0c6">&#34;time&#34;</span>
-)
+  <span style="color:#2c5dcd;font-weight:bold">for</span> <span style="color:#2c5dcd">(</span><span style="color:#5918bb;font-weight:bold">int</span> i<span style="color:#2c5dcd">=</span> 1<span style="color:#2c5dcd">;</span> i <span style="color:#2c5dcd">&lt;</span> nums<span style="color:#2c5dcd">.</span><span style="color:#2c5dcd;font-style:italic">length</span> <span style="color:#2c5dcd">;</span> i<span style="color:#2c5dcd">++){</span>
+      <span style="color:#5918bb;font-weight:bold">int</span> prev <span style="color:#2c5dcd">=</span> nums<span style="color:#2c5dcd">[</span>i<span style="color:#2c5dcd">-</span>1<span style="color:#2c5dcd">];</span>
+      <span style="color:#5918bb;font-weight:bold">int</span> next <span style="color:#2c5dcd">=</span> nums<span style="color:#2c5dcd">[</span>i<span style="color:#2c5dcd">];</span>
 
-type Moo struct {
-    Cow   <span style="color:#2c5dcd;font-weight:bold">int</span>
-    Sound string
-    Tube  chan bool
-}
+      <span style="color:#2c5dcd;font-weight:bold">if</span> <span style="color:#2c5dcd">(</span>prev <span style="color:#2c5dcd">&gt;</span> next<span style="color:#2c5dcd">)</span> <span style="color:#2c5dcd">{</span>
+        <span style="color:#0080ff;font-style:italic">//交換位置
+</span><span style="color:#0080ff;font-style:italic"></span>          swap<span style="color:#2c5dcd">(</span>nums<span style="color:#2c5dcd">,</span> i<span style="color:#2c5dcd">-</span>1<span style="color:#2c5dcd">,</span> i<span style="color:#2c5dcd">)</span>
+      <span style="color:#2c5dcd">}</span><span style="color:#2c5dcd;font-weight:bold">else</span><span style="color:#2c5dcd">{</span>
+        <span style="color:#0080ff;font-style:italic">// 交棒
+</span><span style="color:#0080ff;font-style:italic"></span>      <span style="color:#2c5dcd">}</span>
+  <span style="color:#2c5dcd">}</span>
+<span style="color:#2c5dcd">}</span>
 
-<span style="color:#0080ff;font-style:italic">// A cow will moo until it is being fed
-</span><span style="color:#0080ff;font-style:italic"></span>func cow(num <span style="color:#2c5dcd;font-weight:bold">int</span>, mootube chan Moo) {
-    tube <span style="color:#2c5dcd">:=</span> make(chan bool)
-    <span style="color:#2c5dcd;font-weight:bold">for</span> {
-        select {
-        <span style="color:#2c5dcd;font-weight:bold">case</span> mootube <span style="color:#2c5dcd">&lt;-</span> Moo{num, <span style="color:#0c6">&#34;moo&#34;</span>, tube}<span style="color:#2c5dcd">:</span>
-            fmt.Println(<span style="color:#0c6">&#34;Cow number&#34;</span>, num, <span style="color:#0c6">&#34;mooed through the mootube&#34;</span>)
-            <span style="color:#2c5dcd">&lt;-</span>tube
-            fmt.Println(<span style="color:#0c6">&#34;Cow number&#34;</span>, num, <span style="color:#0c6">&#34;is being fed and stops mooing&#34;</span>)
-            mootube <span style="color:#2c5dcd">&lt;-</span> Moo{num, <span style="color:#0c6">&#34;mooh&#34;</span>, nil}
-            fmt.Println(<span style="color:#0c6">&#34;Cow number&#34;</span>, num, <span style="color:#0c6">&#34;moos one last time out of happyness&#34;</span>)
-            <span style="color:#2c5dcd;font-weight:bold">return</span>
-        <span style="color:#2c5dcd;font-weight:bold">default</span><span style="color:#2c5dcd">:</span>
-            fmt.Println(<span style="color:#0c6">&#34;Cow number&#34;</span>, num, <span style="color:#0c6">&#34;mooed through the mootube and was ignored&#34;</span>)
-            time.Sleep(time.Duration(rand.Int31n(<span style="color:#5918bb;font-weight:bold">1000</span>)) <span style="color:#2c5dcd">*</span> time.Millisecond)
-        }
-    }
-}
-
-<span style="color:#0080ff;font-style:italic">// The farmer wants to put food in all the mootubes to stop the mooing
-</span><span style="color:#0080ff;font-style:italic"></span>func farmer(numcows <span style="color:#2c5dcd;font-weight:bold">int</span>, mootube chan Moo, farmertube chan string) {
-    fmt.Println(<span style="color:#0c6">&#34;Farmer starts listening to the mootube&#34;</span>)
-    <span style="color:#2c5dcd;font-weight:bold">for</span> hungryCows <span style="color:#2c5dcd">:=</span> numcows; hungryCows <span style="color:#2c5dcd">&gt;</span> <span style="color:#5918bb;font-weight:bold">0</span>; {
-        moo <span style="color:#2c5dcd">:=</span> <span style="color:#2c5dcd">&lt;-</span>mootube
-        <span style="color:#2c5dcd;font-weight:bold">if</span> moo.Sound <span style="color:#2c5dcd">==</span> <span style="color:#0c6">&#34;mooh&#34;</span> {
-            fmt.Println(<span style="color:#0c6">&#34;Farmer heard a moo of relief from cow number&#34;</span>, moo.Cow)
-            hungryCows<span style="color:#2c5dcd">--</span>
-        } <span style="color:#2c5dcd;font-weight:bold">else</span> {
-            fmt.Println(<span style="color:#0c6">&#34;Farmer heard a&#34;</span>, moo.Sound, <span style="color:#0c6">&#34;from cow number&#34;</span>, moo.Cow)
-            time.Sleep(<span style="color:#5918bb;font-weight:bold">2</span>e9)
-            fmt.Println(<span style="color:#0c6">&#34;Farmer starts feeding cow number&#34;</span>, moo.Cow)
-            moo.Tube <span style="color:#2c5dcd">&lt;-</span> <span style="color:#2c5dcd;font-weight:bold">true</span>
-        }
-    }
-    fmt.Println(<span style="color:#0c6">&#34;Farmer doesn&#39;t hear a single moo anymore. All done!&#34;</span>)
-    farmertube <span style="color:#2c5dcd">&lt;-</span> <span style="color:#0c6">&#34;yey!&#34;</span>
-}
-
-<span style="color:#0080ff;font-style:italic">// The farm starts out with mooing cows that wants to be fed
-</span><span style="color:#0080ff;font-style:italic"></span>func runFarm(numcows <span style="color:#2c5dcd;font-weight:bold">int</span>) {
-    farmertube <span style="color:#2c5dcd">:=</span> make(chan string)
-    mootube <span style="color:#2c5dcd">:=</span> make(chan Moo)
-    <span style="color:#2c5dcd;font-weight:bold">for</span> cownum <span style="color:#2c5dcd">:=</span> <span style="color:#5918bb;font-weight:bold">0</span>; cownum <span style="color:#2c5dcd">&lt;</span> numcows; cownum<span style="color:#2c5dcd">++</span> {
-        go cow(cownum, mootube)
-    }
-    go farmer(numcows, mootube, farmertube)
-    farmerSaid <span style="color:#2c5dcd">:=</span> <span style="color:#2c5dcd">&lt;-</span>farmertube
-    <span style="color:#2c5dcd;font-weight:bold">if</span> farmerSaid <span style="color:#2c5dcd">==</span> <span style="color:#0c6">&#34;yey!&#34;</span> {
-        fmt.Println(<span style="color:#0c6">&#34;All cows are happy.&#34;</span>)
-    }
-}
-
-func main() {
-    runFarm(<span style="color:#5918bb;font-weight:bold">4</span>)
-    fmt.Println(<span style="color:#0c6">&#34;done&#34;</span>)
-}
-
+<span style="color:#2c5dcd;font-weight:bold">private</span> <span style="color:#2c5dcd;font-weight:bold">static</span> <span style="color:#5918bb;font-weight:bold">void</span> <span style="color:#ff8000;font-weight:bold">swap</span><span style="color:#2c5dcd">(</span><span style="color:#5918bb;font-weight:bold">int</span><span style="color:#2c5dcd">[]</span> nums<span style="color:#2c5dcd">,</span> <span style="color:#5918bb;font-weight:bold">int</span> a <span style="color:#2c5dcd">,</span> <span style="color:#5918bb;font-weight:bold">int</span> b<span style="color:#2c5dcd">)</span> <span style="color:#2c5dcd">{</span>
+  <span style="color:#5918bb;font-weight:bold">int</span> tmp <span style="color:#2c5dcd">=</span> nums<span style="color:#2c5dcd">[</span>a<span style="color:#2c5dcd">];</span>
+  nums<span style="color:#2c5dcd">[</span>a<span style="color:#2c5dcd">]</span> <span style="color:#2c5dcd">=</span> numbs <span style="color:#2c5dcd">[</span>b<span style="color:#2c5dcd">];</span>
+  nums<span style="color:#2c5dcd">[</span>b<span style="color:#2c5dcd">]</span> <span style="color:#2c5dcd">=</span> tmp<span style="color:#2c5dcd">;</span>
+<span style="color:#2c5dcd">}</span>
 </code></pre></div>
         </div>
 

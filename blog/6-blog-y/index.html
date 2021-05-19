@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="人生第一篇Blog文章">
+  <meta name="description" content="測試資料">
   <meta name="author" content="Jian-Lin">
   <meta name="generator" content="Hugo 0.82.1" />
 
@@ -129,64 +129,93 @@
     <div class="row">
       <div class="col-lg-10 mx-auto">
         
-        <h2>Markdown-紀錄常用語法</h2>
+        <a href="/categories/leetcode"
+          class="text-primary">Leetcode</a>
+        
+        <h2>LeetCode 287.Find the Duplicate Number</h2>
         <div class="mb-3 post-meta">
           <span>By Jian-Lin</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>07 May 2021</span>
+          <span>11 May 2021</span>
           
         </div>
         
-        <img src="https://Jiang-Jian-Lin.github.io/images/post/post-3.jpg" class="img-fluid w-100 mb-4" alt="Markdown-紀錄常用語法">
-        
         <div class="content mb-5">
-          <h2 id="題目">題目</h2>
-<p>Given an array of integers <code>nums</code> which is sorted in ascending order, and an integer <code>target</code>, write a function to search <code>target</code> in <code>nums</code>. If <code>target</code> exists, then return its index. Otherwise, return <code>-1</code>.</p>
-<h2 id="解題思路">解題思路</h2>
-<h5 id="1-描述過程-think-out-aloud">1. 描述過程（ Think out aloud）</h5>
-<p>當找到想要的目標，就顯示我的答案，如果數列沒有我的目標就顯示 -1</p>
-<p>使用二分法，因為已經排序過。可以讓時間複雜度在 O(log(n))</p>
-<p>通過左右邊界找到中點，如果為要找的數返回，否則移動邊界，找不到，返回 -1。</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#2c5dcd;font-weight:bold">var</span> search <span style="color:#2c5dcd">=</span> <span style="color:#2c5dcd;font-weight:bold">function</span> (nums, target) {
-  <span style="color:#2c5dcd;font-weight:bold">let</span> left <span style="color:#2c5dcd">=</span> <span style="color:#5918bb;font-weight:bold">0</span>; <span style="color:#0080ff;font-style:italic">// 初始左边界
-</span><span style="color:#0080ff;font-style:italic"></span>  <span style="color:#2c5dcd;font-weight:bold">let</span> right <span style="color:#2c5dcd">=</span> nums.length <span style="color:#2c5dcd">-</span> <span style="color:#5918bb;font-weight:bold">1</span>; <span style="color:#0080ff;font-style:italic">// 初始右边界
-</span><span style="color:#0080ff;font-style:italic"></span>  <span style="color:#0080ff;font-style:italic">// 如果left &gt; right 证明整个数组结束了仍没有找到目标值
-</span><span style="color:#0080ff;font-style:italic"></span>  <span style="color:#2c5dcd;font-weight:bold">while</span> (left <span style="color:#2c5dcd">&lt;=</span> right) {
-    <span style="color:#2c5dcd;font-weight:bold">let</span> mid <span style="color:#2c5dcd">=</span> left <span style="color:#2c5dcd">+</span> <span style="color:#5918bb;font-weight:bold">Math</span>.floor((right <span style="color:#2c5dcd">-</span> left) <span style="color:#2c5dcd">/</span> <span style="color:#5918bb;font-weight:bold">2</span>); <span style="color:#0080ff;font-style:italic">//防止溢出
-</span><span style="color:#0080ff;font-style:italic"></span>    <span style="color:#2c5dcd;font-weight:bold">if</span> (target <span style="color:#2c5dcd">===</span> nums[mid]) {
-      <span style="color:#2c5dcd;font-weight:bold">return</span> mid;
-    } <span style="color:#2c5dcd;font-weight:bold">else</span> <span style="color:#2c5dcd;font-weight:bold">if</span> (target <span style="color:#2c5dcd">&gt;</span> nums[mid]) {
-      <span style="color:#0080ff;font-style:italic">// 目标值大于中值，则中间左侧可以抛弃了
-</span><span style="color:#0080ff;font-style:italic"></span>      left <span style="color:#2c5dcd">=</span> mid <span style="color:#2c5dcd">+</span> <span style="color:#5918bb;font-weight:bold">1</span>;
-    } <span style="color:#2c5dcd;font-weight:bold">else</span> {
-      <span style="color:#0080ff;font-style:italic">// 目标值小于中值，则中间右侧可以抛弃了
-</span><span style="color:#0080ff;font-style:italic"></span>      right <span style="color:#2c5dcd">=</span> mid <span style="color:#2c5dcd">-</span> <span style="color:#5918bb;font-weight:bold">1</span>;
-    }
-  }
-  <span style="color:#2c5dcd;font-weight:bold">return</span> <span style="color:#2c5dcd">-</span><span style="color:#5918bb;font-weight:bold">1</span>;
-};
-</code></pre></div><h3 id="使用-binary-search-的關鍵">使用 Binary Search 的關鍵</h3>
-<blockquote>
-<ol>
-<li>排序後的數組</li>
-<li>限定時間複雜度的搜尋法(題目限定 O(n)以下的解法）</li>
-<li><a href="https://www.cnblogs.com/grandyang/p/6854825.html">Others</a></li>
-</ol>
-</blockquote>
-<h3 id="補充">補充</h3>
-<blockquote>
-<ul>
-<li>用二元搜尋,每次都要先 Sorted Array。因此追加資料時，必須插入恰當的位置，需要付出維護陣列的代價。</li>
-<li>線性搜尋，陣列的數據雜亂無章也無所謂。</li>
-</ul>
-</blockquote>
-<p><img src="/images/BigO.png" alt=""></p>
-<p><a href="https://www.researchgate.net/figure/shows-a-comparison-of-Sorting-Algorithms_tbl1_281208285">各種排序比較</a></p>
-<p><a href="https://blog.huli.tw/2016/09/23/binary-search-introduction/">Huli</a></p>
-<p><a href="https://yuguang.blog.csdn.net/article/details/110879893?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-7.vipsorttest&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-7.vipsorttest">Csdn</a></p>
-<p><a href="https://maxming0.github.io/2020/10/08/Binary-Search/">python</a></p>
+          <p>test</p>
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">
+package main
 
+<span style="color:#ff8000;font-weight:bold">import</span> (
+    <span style="color:#0c6">&#34;fmt&#34;</span>
+    <span style="color:#0c6">&#34;math/rand&#34;</span>
+    <span style="color:#0c6">&#34;time&#34;</span>
+)
+
+type Moo <span style="color:#2c5dcd;font-weight:bold">struct</span> {
+    Cow   <span style="color:#5918bb;font-weight:bold">int</span>
+    Sound string
+    Tube  chan <span style="color:#5918bb;font-weight:bold">bool</span>
+}
+
+<span style="color:#0080ff;font-style:italic">// A cow will moo until it is being fed
+</span><span style="color:#0080ff;font-style:italic"></span>func <span style="color:#ff8000;font-weight:bold">cow</span>(num <span style="color:#5918bb;font-weight:bold">int</span>, mootube chan Moo) {
+    tube :<span style="color:#2c5dcd">=</span> make(chan <span style="color:#5918bb;font-weight:bold">bool</span>)
+    <span style="color:#2c5dcd;font-weight:bold">for</span> {
+        select {
+        <span style="color:#2c5dcd;font-weight:bold">case</span> mootube <span style="color:#2c5dcd">&lt;-</span> Moo{num, <span style="color:#0c6">&#34;moo&#34;</span>, tube}<span style="color:#2c5dcd">:</span>
+            fmt.Println(<span style="color:#0c6">&#34;Cow number&#34;</span>, num, <span style="color:#0c6">&#34;mooed through the mootube&#34;</span>)
+            <span style="color:#2c5dcd">&lt;-</span>tube
+            fmt.Println(<span style="color:#0c6">&#34;Cow number&#34;</span>, num, <span style="color:#0c6">&#34;is being fed and stops mooing&#34;</span>)
+            mootube <span style="color:#2c5dcd">&lt;-</span> Moo{num, <span style="color:#0c6">&#34;mooh&#34;</span>, nil}
+            fmt.Println(<span style="color:#0c6">&#34;Cow number&#34;</span>, num, <span style="color:#0c6">&#34;moos one last time out of happyness&#34;</span>)
+            <span style="color:#2c5dcd;font-weight:bold">return</span>
+        <span style="color:#2c5dcd;font-weight:bold">default</span><span style="color:#2c5dcd">:</span>
+            fmt.Println(<span style="color:#0c6">&#34;Cow number&#34;</span>, num, <span style="color:#0c6">&#34;mooed through the mootube and was ignored&#34;</span>)
+            time.Sleep(time.Duration(rand.Int31n(<span style="color:#5918bb;font-weight:bold">1000</span>)) <span style="color:#2c5dcd">*</span> time.Millisecond)
+        }
+    }
+}
+
+<span style="color:#0080ff;font-style:italic">// The farmer wants to put food in all the mootubes to stop the mooing
+</span><span style="color:#0080ff;font-style:italic"></span>func <span style="color:#ff8000;font-weight:bold">farmer</span>(numcows <span style="color:#5918bb;font-weight:bold">int</span>, mootube chan Moo, farmertube chan string) {
+    fmt.Println(<span style="color:#0c6">&#34;Farmer starts listening to the mootube&#34;</span>)
+    <span style="color:#2c5dcd;font-weight:bold">for</span> hungryCows :<span style="color:#2c5dcd">=</span> numcows; hungryCows <span style="color:#2c5dcd">&gt;</span> <span style="color:#5918bb;font-weight:bold">0</span>; {
+        moo :<span style="color:#2c5dcd">=</span> <span style="color:#2c5dcd">&lt;-</span>mootube
+        <span style="color:#2c5dcd;font-weight:bold">if</span> moo.Sound <span style="color:#2c5dcd">==</span> <span style="color:#0c6">&#34;mooh&#34;</span> {
+            fmt.Println(<span style="color:#0c6">&#34;Farmer heard a moo of relief from cow number&#34;</span>, moo.Cow)
+            hungryCows<span style="color:#2c5dcd">--</span>
+        } <span style="color:#2c5dcd;font-weight:bold">else</span> {
+            fmt.Println(<span style="color:#0c6">&#34;Farmer heard a&#34;</span>, moo.Sound, <span style="color:#0c6">&#34;from cow number&#34;</span>, moo.Cow)
+            time.Sleep(<span style="color:#5918bb;font-weight:bold">2e9</span>)
+            fmt.Println(<span style="color:#0c6">&#34;Farmer starts feeding cow number&#34;</span>, moo.Cow)
+            moo.Tube <span style="color:#2c5dcd">&lt;-</span> <span style="color:#5918bb;font-weight:bold">true</span>
+        }
+    }
+    fmt.Println(<span style="color:#0c6">&#34;Farmer doesn&#39;t hear a single moo anymore. All done!&#34;</span>)
+    farmertube <span style="color:#2c5dcd">&lt;-</span> <span style="color:#0c6">&#34;yey!&#34;</span>
+}
+
+<span style="color:#0080ff;font-style:italic">// The farm starts out with mooing cows that wants to be fed
+</span><span style="color:#0080ff;font-style:italic"></span>func <span style="color:#ff8000;font-weight:bold">runFarm</span>(numcows <span style="color:#5918bb;font-weight:bold">int</span>) {
+    farmertube :<span style="color:#2c5dcd">=</span> make(chan string)
+    mootube :<span style="color:#2c5dcd">=</span> make(chan Moo)
+    <span style="color:#2c5dcd;font-weight:bold">for</span> cownum :<span style="color:#2c5dcd">=</span> <span style="color:#5918bb;font-weight:bold">0</span>; cownum <span style="color:#2c5dcd">&lt;</span> numcows; cownum<span style="color:#2c5dcd">++</span> {
+        go cow(cownum, mootube)
+    }
+    go farmer(numcows, mootube, farmertube)
+    farmerSaid :<span style="color:#2c5dcd">=</span> <span style="color:#2c5dcd">&lt;-</span>farmertube
+    <span style="color:#2c5dcd;font-weight:bold">if</span> farmerSaid <span style="color:#2c5dcd">==</span> <span style="color:#0c6">&#34;yey!&#34;</span> {
+        fmt.Println(<span style="color:#0c6">&#34;All cows are happy.&#34;</span>)
+    }
+}
+
+func <span style="color:#ff8000;font-weight:bold">main</span>() {
+    runFarm(<span style="color:#5918bb;font-weight:bold">4</span>)
+    fmt.Println(<span style="color:#0c6">&#34;done&#34;</span>)
+}
+
+</code></pre></div>
         </div>
 
         

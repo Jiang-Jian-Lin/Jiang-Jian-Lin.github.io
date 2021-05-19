@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Medium on Jian-Lin&#39;s Blog</title>
+    <link>https://Jiang-Jian-Lin.github.io/tags/medium/</link>
+    <description>Recent content in Medium on Jian-Lin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-us</language>
+    <lastBuildDate>Tue, 11 May 2021 06:00:00 +0800</lastBuildDate><atom:link href="https://Jiang-Jian-Lin.github.io/tags/medium/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 287.Find the Duplicate Number</title>
+      <link>https://Jiang-Jian-Lin.github.io/blog/5-blog/</link>
+      <pubDate>Tue, 11 May 2021 06:00:00 +0800</pubDate>
+      
+      <guid>https://Jiang-Jian-Lin.github.io/blog/5-blog/</guid>
+      <description>練習完思考 ： 龜兔賽跑演算法</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 287.Find the Duplicate Number</title>
+      <link>https://Jiang-Jian-Lin.github.io/blog/6-blog-y/</link>
+      <pubDate>Tue, 11 May 2021 06:00:00 +0800</pubDate>
+      
+      <guid>https://Jiang-Jian-Lin.github.io/blog/6-blog-y/</guid>
+      <description>test
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; &amp;#34;time&amp;#34; ) type Moo struct { Cow int Sound string Tube chan bool } // A cow will moo until it is being fed func cow(num int, mootube chan Moo) { tube := make(chan bool) for { select { case mootube &amp;lt;- Moo{num, &amp;#34;moo&amp;#34;, tube}: fmt.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 704 Binary Search</title>
+      <link>https://Jiang-Jian-Lin.github.io/blog/4-blog/</link>
+      <pubDate>Tue, 11 May 2021 06:00:00 +0800</pubDate>
+      
+      <guid>https://Jiang-Jian-Lin.github.io/blog/4-blog/</guid>
+      <description>//need 分支: recursion(DFS) //need 不能重複: global 2-d array //解題技巧 變數 &amp;gt; 一個字母</description>
+    </item>
+    
+  </channel>
+</rss>
