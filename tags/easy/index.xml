@@ -6,14 +6,14 @@
     <description>Recent content in Easy on Jian-Lin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-us</language>
-    <lastBuildDate>Tue, 11 May 2021 06:00:00 +0800</lastBuildDate><atom:link href="https://Jiang-Jian-Lin.github.io/tags/easy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 May 2021 21:30:00 +0800</lastBuildDate><atom:link href="https://Jiang-Jian-Lin.github.io/tags/easy/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Bubble Sort</title>
-      <link>https://Jiang-Jian-Lin.github.io/blog/3-blog/</link>
-      <pubDate>Tue, 11 May 2021 06:00:00 +0800</pubDate>
+      <title>Leetcode 704 Binary Search</title>
+      <link>https://Jiang-Jian-Lin.github.io/blog/2-blog/</link>
+      <pubDate>Tue, 11 May 2021 21:30:00 +0800</pubDate>
       
-      <guid>https://Jiang-Jian-Lin.github.io/blog/3-blog/</guid>
-      <description>題目 Bubble Sort 基本觀念 Implement Code public static void mian</description>
+      <guid>https://Jiang-Jian-Lin.github.io/blog/2-blog/</guid>
+      <description>題目 Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums.</description>
     </item>
     
   </channel>

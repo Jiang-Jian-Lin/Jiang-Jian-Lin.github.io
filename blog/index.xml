@@ -6,15 +6,14 @@
     <description>Recent content in Blogs on Jian-Lin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-us</language>
-    <lastBuildDate>Tue, 11 May 2021 06:00:00 +0800</lastBuildDate><atom:link href="https://Jiang-Jian-Lin.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 May 2021 21:30:00 +0800</lastBuildDate><atom:link href="https://Jiang-Jian-Lin.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>LeetCode 287.Find the Duplicate Number</title>
-      <link>https://Jiang-Jian-Lin.github.io/blog/6-blog-y/</link>
-      <pubDate>Tue, 11 May 2021 06:00:00 +0800</pubDate>
+      <title>Leetcode 704 Binary Search</title>
+      <link>https://Jiang-Jian-Lin.github.io/blog/2-blog/</link>
+      <pubDate>Tue, 11 May 2021 21:30:00 +0800</pubDate>
       
-      <guid>https://Jiang-Jian-Lin.github.io/blog/6-blog-y/</guid>
-      <description>test
-package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; &amp;#34;time&amp;#34; ) type Moo struct { Cow int Sound string Tube chan bool } // A cow will moo until it is being fed func cow(num int, mootube chan Moo) { tube := make(chan bool) for { select { case mootube &amp;lt;- Moo{num, &amp;#34;moo&amp;#34;, tube}: fmt.</description>
+      <guid>https://Jiang-Jian-Lin.github.io/blog/2-blog/</guid>
+      <description>題目 Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums.</description>
     </item>
     
     <item>

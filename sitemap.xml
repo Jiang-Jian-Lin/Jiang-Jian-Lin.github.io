@@ -2,28 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://Jiang-Jian-Lin.github.io/tags/binary-search/</loc>
+    <lastmod>2021-05-11T21:30:00+08:00</lastmod>
+  </url><url>
     <loc>https://Jiang-Jian-Lin.github.io/blog/</loc>
-    <lastmod>2021-05-11T06:00:00+08:00</lastmod>
+    <lastmod>2021-05-11T21:30:00+08:00</lastmod>
   </url><url>
     <loc>https://Jiang-Jian-Lin.github.io/categories/</loc>
-    <lastmod>2021-05-11T06:00:00+08:00</lastmod>
+    <lastmod>2021-05-11T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/tags/easy/</loc>
+    <lastmod>2021-05-11T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/tags/javascript/</loc>
+    <lastmod>2021-05-11T21:30:00+08:00</lastmod>
   </url><url>
     <loc>https://Jiang-Jian-Lin.github.io/</loc>
-    <lastmod>2021-05-11T06:00:00+08:00</lastmod>
+    <lastmod>2021-05-11T21:30:00+08:00</lastmod>
   </url><url>
     <loc>https://Jiang-Jian-Lin.github.io/categories/leetcode/</loc>
-    <lastmod>2021-05-11T06:00:00+08:00</lastmod>
+    <lastmod>2021-05-11T21:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/blog/6-blog-y/</loc>
-    <lastmod>2021-05-11T06:00:00+08:00</lastmod>
+    <loc>https://Jiang-Jian-Lin.github.io/blog/2-blog/</loc>
+    <lastmod>2021-05-11T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://Jiang-Jian-Lin.github.io/tags/</loc>
+    <lastmod>2021-05-11T21:30:00+08:00</lastmod>
   </url><url>
     <loc>https://Jiang-Jian-Lin.github.io/blog/1-blog/</loc>
     <lastmod>2021-05-07T21:30:00+08:00</lastmod>
   </url><url>
     <loc>https://Jiang-Jian-Lin.github.io/tags/other/</loc>
-    <lastmod>2021-05-07T21:30:00+08:00</lastmod>
-  </url><url>
-    <loc>https://Jiang-Jian-Lin.github.io/tags/</loc>
     <lastmod>2021-05-07T21:30:00+08:00</lastmod>
   </url><url>
     <loc>https://Jiang-Jian-Lin.github.io/about/</loc>
